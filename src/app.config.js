@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/gradienter/index',
     'pages/dashboard/index',
     'pages/index/index',
   ],
