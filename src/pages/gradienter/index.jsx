@@ -65,18 +65,17 @@ class Gradienter extends Component {
   componentDidHide() { }
 
   calcDegree = (value) => {
-    const degree = Math.abs(value - 90)
-    return new Number(degree).toFixed(1)
+    // const degree = Math.abs(value - 90)
+    return new Number(value).toFixed(0)
   }
 
   render() {
     const { degreesXY, degreesYZ, rotateXY, rotateYZ, rotateZX } = this.state
-    // const degXY = this.calcDegree(degreesXY)
-    // const degYZ = this.calcDegree(degreesYZ)
+    const degYZ = this.calcDegree(degreesYZ)
     return (
       <View className='page-gradienter'>
         <View className='title'><Text>水平仪</Text></View>
-        <View className='result'><Text>{degreesYZ} 度</Text></View>
+        <View className='result'><Text>{degYZ} 度</Text></View>
         {/* <View className='result'>degreeXY: <Text>{degreesXY} 度</Text></View>
         <View className='result'>degreeYZ: <Text>{degreesYZ} 度</Text></View>
         <View className='result'>rotateXY: <Text>{rotateXY} </Text></View>
